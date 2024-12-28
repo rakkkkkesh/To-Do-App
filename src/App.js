@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import './App.css';
-
 function App() {
   const [addTask, setAddTask] = useState('');
   const [tasks, setTasks] = useState(() => {
@@ -57,7 +55,11 @@ function App() {
   return (
     <div className="p-6 flex items-center justify-center">
       <div className="flex flex-col w-full max-w-lg bg-gray-700 border-slate-300 border-solid border-2 rounded-lg p-6">
-        <h1 className="text-3xl font-bold text-white mb-6 text-center">To-Do App</h1>
+        <div className='w-full flex flex-row items-center justify-center gap-5 mb-6'>
+          <img className='rounded-full' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShrMeWMtU7lXZB6CBj6ReBS6Iyyfch6ubZQQ&s' alt='Logo' height={"70px"} width={"70px"} />
+
+          <h1 className="text-3xl font-bold text-white text-center">To-Do App</h1>
+        </div>
 
         <div className="w-full flex flex-col">
           <div className="flex flex-col sm:flex-row mb-4">
@@ -77,7 +79,10 @@ function App() {
           </div>
 
           {tasks.length > 0 && (
-            <h2 className="text-center text-xl font-bold text-white mb-6">Your To-Do List</h2>
+            <div className='w-full flex flex-row items-center justify-center gap-2 mt-6 mb-6'>
+              <img className='rounded-full' src='https://img.freepik.com/premium-vector/todo-app-logo-icon_1076610-65917.jpg' alt='todo-list' height={"40px"} width={"40px"} />
+              <h2 className="text-center text-xl font-bold text-white">Your To-Do List</h2>
+            </div>
           )}
 
 
